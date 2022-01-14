@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home10.btn_newsave"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:background="@drawable/buttonleft"
+        android:fontFamily="@font/sahel"
+        android:text="@string/import_exel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.26"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home10.btn_applysave"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@drawable/buttonright"
+        android:fontFamily="@font/sahel"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.26"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/home10.textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:fontFamily="@font/sahel"
+        android:text="نوع دسته گاو"
+        android:textColor="@color/calypso"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home10.btn_newsave" />
+    <RadioGroup
+        android:id="@+id/home10_radiogroup"
+        app:layout_constraintTop_toBottomOf="@id/home10.textView"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/home10.radiobtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_23sdp"
+            android:button="@drawable/radiobuttom"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/calypso"
+            android:paddingStart="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_54sdp"
+            android:text="غیر شیری"
+            android:checked="true"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@id/home10.textView"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/home10.radiobtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_23sdp"
+            android:button="@drawable/radiobuttom"
+            android:paddingStart="@dimen/_4sdp"
+            android:textColor="@color/calypso"
+            android:text="شیری"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_60sdp"
+            android:textSize="@dimen/_15sdp"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:layout_constraintTop_toBottomOf="@id/home10.textView"
+            />
+    </RadioGroup>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/home10.salonname.l"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:hint="نام سالن"
+        android:textColorHint="@color/calypso"
+        app:layout_constraintTop_toBottomOf="@id/home10_radiogroup">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/home10.namesalon.text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:textSize="@dimen/_16sdp"
+            android:gravity="center|start"
+            android:fontFamily="@font/sahel"
+            android:background="@drawable/edittext1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/home10.cowtype.l"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:hint="دسته گاو"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:textColorHint="@color/calypso"
+        app:layout_constraintTop_toBottomOf="@id/home10.salonname.l">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/home10.cowtype.text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:textSize="@dimen/_16sdp"
+            android:gravity="center|start"
+            android:fontFamily="@font/sahel"
+            android:background="@drawable/edittext1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/home10.roomnum.l"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:hint="شماره  سالن"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:textColorHint="@color/calypso"
+        app:layout_constraintTop_toBottomOf="@id/home10.cowtype.l">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/home10.roomnum.text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:textSize="@dimen/_16sdp"
+            android:gravity="center|start"
+            android:fontFamily="@font/sahel"
+            android:background="@drawable/edittext1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/home10.cows.l"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:hint="تعداد گاو"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:textColorHint="@color/calypso"
+        app:layout_constraintTop_toBottomOf="@id/home10.roomnum.l">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/home10.cows.text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext1"
+            android:fontFamily="@font/sahel"
+            android:gravity="center|start"
+            android:paddingHorizontal="@dimen/_21sdp"
+            android:textSize="@dimen/_16sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/home10.textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:fontFamily="@font/sahel"
+        android:text="انتخاب خوراک"
+        android:textColor="@color/calypso"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home10.cows.l" />
+
+    <Spinner
+        android:id="@+id/home10.spiner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:background="@drawable/spiner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home10.textView3" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_9sdp"
+        app:layout_constraintTop_toBottomOf="@id/home10.spiner"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

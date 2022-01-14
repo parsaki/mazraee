@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_240sdp"
+    android:layout_height="@dimen/_268sdp"
+    android:background="@drawable/view"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/home.titeltext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sahel"
+        android:textSize="@dimen/_16sdp"
+        android:gravity="center"
+        android:textColor="@color/calypso"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/home.text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sahel"
+        android:textSize="@dimen/_11sdp"
+        android:gravity="center"
+        android:textColor="@color/calypso"
+        android:text="@string/attention"
+        android:layout_marginTop="@dimen/_1sdp"
+        app:layout_constraintTop_toBottomOf="@id/home.titeltext"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home.samplebtn"
+        android:backgroundTint="@color/blue_zodiac"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/sahel"
+        android:text="عکس/فایل نمونه"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home.text"
+        app:cornerRadius="32dp"/>
+    <View
+        android:id="@+id/home.view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_79sdp"
+        android:background="@drawable/view"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home.samplebtn"
+       />
+
+    <ImageView
+        android:id="@+id/home.imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_36sdp"
+        app:srcCompat="@drawable/up"
+        android:layout_marginTop="@dimen/_11sdp"
+        app:layout_constraintTop_toTopOf="@id/home.view"
+        app:layout_constraintStart_toStartOf="@id/home.view"
+        app:layout_constraintEnd_toEndOf="@id/home.view"/>
+
+    <TextView
+        android:id="@+id/home.textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/sahel"
+        android:textColor="@color/alto"
+        android:text="بارگزاری فایل اکسل"
+        android:layout_marginTop="@dimen/_1sdp"
+        app:layout_constraintStart_toStartOf="@id/home.view"
+        app:layout_constraintEnd_toEndOf="@id/home.view"
+        app:layout_constraintTop_toBottomOf="@id/home.imageView"
+        app:layout_constraintBottom_toBottomOf="@id/home.view"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home.savabtn"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_28sdp"
+
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:background="@drawable/buttonleft"
+        android:fontFamily="@font/sahel"
+        android:textSize="@dimen/_15sdp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home.view"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

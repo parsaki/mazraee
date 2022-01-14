@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/profile_text_v_local"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        android:textSize="23sp"
+        android:textColor="@color/calypso"
+        android:text="منطقه"
+        android:gravity="center"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/sahel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Spinner
+        android:id="@+id/profile.spiner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@drawable/bluespiner"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:spinnerMode="dialog"
+
+        android:gravity="center|end"
+        android:paddingEnd="@dimen/_13sdp"
+        app:layout_constraintTop_toTopOf="@id/profile_text_v_local"
+        app:layout_constraintBottom_toBottomOf="@id/profile_text_v_local"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.76"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

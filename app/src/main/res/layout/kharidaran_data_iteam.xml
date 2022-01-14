@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/kharidarani.min"
+        android:src="@drawable/mines"
+        android:scaleType="fitXY"
+        android:translationZ="10dp"
+        android:background="@color/white"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/kharidarani.guid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/kharidarani.guid3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.68" />
+
+
+    <View
+        android:id="@+id/kharidarani.view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/view_kharidaran_iteam"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/kharidarani.text1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:inputType="number"
+        android:gravity="center"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:textColor="@color/blue_zodiac"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_13sdp"
+        android:background="@drawable/edittext3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/kharidarani.guid1"/>
+    <EditText
+        android:id="@+id/kharidarani.text2"
+        android:layout_width="0dp"
+
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:inputType="number"
+        android:textColor="@color/blue_zodiac"
+        android:layout_marginStart="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/edittext3"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/kharidarani.guid1"
+        app:layout_constraintEnd_toEndOf="@id/kharidarani.guid3"/>
+    <EditText
+        android:id="@+id/kharidarani.text3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:gravity="center"
+        android:textColor="@color/blue_zodiac"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/edittext3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/kharidarani.guid3"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ImageButton
+        android:id="@+id/kharidarani.pluse"
+        android:src="@drawable/plus"
+        android:scaleType="fitXY"
+        android:translationZ="10dp"
+        android:background="@color/white"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/kharidarani.view"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

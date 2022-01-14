@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/frooshi.min"
+        android:src="@drawable/mines"
+        android:scaleType="fitXY"
+        android:translationZ="10dp"
+        android:background="@color/white"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/frooshi.guid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.39" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/frooshi.guid3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/frooshi.guid4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.77" />
+
+
+    <View
+        android:id="@+id/frooshi.view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/view_kharidaran_iteam"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/frooshi.text1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:textSize="@dimen/_10sdp"
+        android:lines="1"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_3sdp"
+        android:paddingStart="@dimen/_19sdp"
+        android:textColor="@color/blue_zodiac"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        android:background="@drawable/picktime"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/frooshi.guid1"/>
+    <EditText
+        android:id="@+id/frooshi.text2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/blue_zodiac"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/edittext3"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/frooshi.guid1"
+        app:layout_constraintEnd_toEndOf="@id/frooshi.guid3"/>
+    <EditText
+        android:id="@+id/frooshi.text3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:inputType="number"
+        android:gravity="center"
+        android:textColor="@color/blue_zodiac"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/edittext3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/frooshi.guid3"
+        app:layout_constraintEnd_toEndOf="@id/frooshi.guid4"/>
+    <EditText
+        android:id="@+id/frooshi.text4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:paddingHorizontal="@dimen/_7sdp"
+        android:gravity="center"
+        android:textColor="@color/blue_zodiac"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/edittext3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/frooshi.guid4"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/frooshi.pluse"
+        android:src="@drawable/plus"
+        android:scaleType="fitXY"
+        android:translationZ="10dp"
+        android:background="@color/white"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/frooshi.view"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

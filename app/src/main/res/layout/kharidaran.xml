@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_255sdp"
+    android:layout_height="@dimen/_348sdp"
+    android:translationZ="@dimen/_20sdp"
+    android:background="@drawable/kharidaranview">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/kharidaran.toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_46sdp"
+        android:background="@drawable/kharidaran_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/kharidaran"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_23sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/kharidaran.toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/kharidaran.info"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:scaleType="fitXY"
+        android:background="@color/calypso"
+        android:src="@drawable/info"
+        app:layout_constraintBottom_toBottomOf="@id/kharidaran.toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/kharidaran.text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:text="قیمت\nجایزه"
+        android:textColor="@color/calypso"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/kharidaran.toolbar"
+        app:layout_constraintEnd_toEndOf="@id/kharidaran.guid1"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/kharidaran.text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:text="قیمت\n پایه"
+        android:textColor="@color/calypso"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/kharidaran.toolbar"
+        app:layout_constraintEnd_toEndOf="@id/kharidaran.guid4"
+        app:layout_constraintStart_toStartOf="@id/kharidaran.guid1"
+        />
+
+    <TextView
+        android:id="@+id/kharidaran.text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:text="نام"
+        android:textColor="@color/calypso"
+        android:textSize="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        app:layout_constraintTop_toBottomOf="@id/kharidaran.toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/kharidaran.guid4"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/kharidaran.guid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.37" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/kharidaran.guid4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/kharidaran.recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:background="@drawable/view"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_9sdp"
+        app:layout_constraintBottom_toTopOf="@id/kharidaran.save"
+        app:layout_constraintTop_toBottomOf="@id/kharidaran.text1"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/kharidaran.save"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:background="@drawable/buttonleft"
+        android:textSize="@dimen/_15sdp"
+        android:fontFamily="@font/sahel"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:layout_marginStart="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/kharidaran.imput"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:fontFamily="@font/sahel"
+        android:background="@drawable/buttonright"
+        android:textSize="@dimen/_15sdp"
+        android:text="@string/import_exel"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

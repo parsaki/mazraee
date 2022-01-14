@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_15sdp">
+    <View
+        android:id="@+id/archive1.view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_127sdp"
+        android:layout_marginHorizontal="@dimen/_7sdp"
+        android:background="@drawable/card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/archive1.show"
+        android:background="@drawable/circle"
+        android:text="نمایش"
+        android:textColor="@color/calypso"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/sahel"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="@id/archive1.view"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/archive1.edit"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/calypso"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/sahel"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_26sdp"
+        app:cornerRadius="@dimen/_8sdp"
+        android:text="ویرایش"
+
+        app:layout_constraintStart_toStartOf="@id/archive1.view"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+        android:id="@+id/archivr1.text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sahel"
+        android:text="نام کنسانتره :"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/archive1.view"/>
+    <TextView
+        android:id="@+id/archivr1.text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sahel"
+        android:text="تاریخ آخرین ویرایش :"
+        app:layout_constraintTop_toBottomOf="@id/archivr1.text1"
+        app:layout_constraintEnd_toEndOf="@id/archive1.view"/>
+    <TextView
+        android:id="@+id/archivr1.text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sahel"
+        android:text="قیمت هر کیلو کنسانتره :"
+        app:layout_constraintTop_toBottomOf="@id/archivr1.text2"
+        app:layout_constraintEnd_toEndOf="@id/archive1.view"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

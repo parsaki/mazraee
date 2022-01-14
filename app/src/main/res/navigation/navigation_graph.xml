@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/modiriat_Frag">
+
+    <fragment
+        android:id="@+id/modiriat_Frag"
+        android:name="com.example.modiriatemazraee.view.modiriat_Frag"
+        android:label="modiriat_Frag" >
+
+        <action
+            android:id="@+id/action_modiriat_Frag_to_poshtiban_Frag"
+            app:destination="@id/poshtiban_Frag" />
+        <action
+            android:id="@+id/action_modiriat_Frag_to_profile_Frag"
+            app:destination="@id/profile_Frag" />
+        <action
+            android:id="@+id/action_modiriat_Frag_to_home_Frag"
+            app:destination="@id/home_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/poshtiban_Frag"
+        android:name="com.example.modiriatemazraee.view.Poshtiban_Frag"
+        android:label="Poshtiban_Frag" />
+    <fragment
+        android:id="@+id/profile_Frag"
+        android:name="com.example.modiriatemazraee.view.Profile_Frag"
+        android:label="Profile_Frag" />
+    <fragment
+        android:id="@+id/home_Frag"
+        android:name="com.example.modiriatemazraee.view.Home_Frag"
+        android:label="Home_Frag" >
+        <action
+            android:id="@+id/action_home_Frag_to_home9_Frag"
+            app:destination="@id/home9_Frag" />
+        <action
+            android:id="@+id/action_home_Frag_to_home5_Frag"
+            app:destination="@id/home5_Frag" />
+        <action
+            android:id="@+id/action_home_Frag_to_home1_Frag"
+            app:destination="@id/home1_Frag" />
+        <action
+            android:id="@+id/action_home_Frag_to_kharidaran_Frag"
+            app:destination="@id/kharidaran_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home1_Frag"
+        android:name="com.example.modiriatemazraee.view.Home1_Frag"
+        android:label="Home1_Frag" >
+        <action
+            android:id="@+id/action_home1_Frag_to_home2_Frag"
+            app:destination="@id/home2_Frag" />
+        <action
+            android:id="@+id/action_home1_Frag_to_home3_Frag"
+            app:destination="@id/home3_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home5_Frag"
+        android:name="com.example.modiriatemazraee.view.Home5_Frag"
+        android:label="Home5_Frag" >
+        <action
+            android:id="@+id/action_home5_Frag_to_home6_Frag"
+            app:destination="@id/home6_Frag" />
+        <action
+            android:id="@+id/action_home5_Frag_to_home7_Frag"
+            app:destination="@id/home7_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home9_Frag"
+        android:name="com.example.modiriatemazraee.view.Home9_Frag"
+        android:label="Home9_Frag" >
+        <action
+            android:id="@+id/action_home9_Frag_to_home11_Frag"
+            app:destination="@id/home11_Frag" />
+        <action
+            android:id="@+id/action_home9_Frag_to_home10_Frag"
+            app:destination="@id/home10_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2_Frag"
+        android:name="com.example.modiriatemazraee.view.Home2_Frag"
+        android:label="Home2_Frag" >
+        <action
+            android:id="@+id/action_home2_Frag_to_home1_Frag"
+            app:destination="@id/home1_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home3_Frag"
+        android:name="com.example.modiriatemazraee.view.Home3_Frag"
+        android:label="Home3_Frag" >
+        <action
+            android:id="@+id/action_home3_Frag_to_home4_Frag"
+            app:destination="@id/home4_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home4_Frag"
+        android:name="com.example.modiriatemazraee.view.Home4_Frag"
+        android:label="Home4_Frag" >
+        <action
+            android:id="@+id/action_home4_Frag_to_home1_Frag"
+            app:destination="@id/home1_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home6_Frag"
+        android:name="com.example.modiriatemazraee.view.Home6_Frag"
+        android:label="Home6_Frag" >
+        <action
+            android:id="@+id/action_home6_Frag_to_home5_Frag"
+            app:destination="@id/home5_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home7_Frag"
+        android:name="com.example.modiriatemazraee.view.Home7_Frag"
+        android:label="Home7_Frag" >
+        <action
+            android:id="@+id/action_home7_Frag_to_home8_Frag"
+            app:destination="@id/home8_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home8_Frag"
+        android:name="com.example.modiriatemazraee.view.Home8_Frag"
+        android:label="Home8_Frag" >
+        <action
+            android:id="@+id/action_home8_Frag_to_home5_Frag"
+            app:destination="@id/home5_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home10_Frag"
+        android:name="com.example.modiriatemazraee.view.Home10_Frag"
+        android:label="Home10_Frag" >
+        <action
+            android:id="@+id/action_home10_Frag_to_home9_Frag"
+            app:destination="@id/home9_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home11_Frag"
+        android:name="com.example.modiriatemazraee.view.Home11_Frag"
+        android:label="Home11_Frag" >
+        <action
+            android:id="@+id/action_home11_Frag_to_home12_Frag"
+            app:destination="@id/home12_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/home12_Frag"
+        android:name="com.example.modiriatemazraee.view.Home12_Frag"
+        android:label="Home12_Frag" >
+        <action
+            android:id="@+id/action_home12_Frag_to_home9_Frag"
+            app:destination="@id/home9_Frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/kharidaran_Frag"
+        android:name="com.example.modiriatemazraee.view.Kharidaran_Frag"
+        android:label="Kharidaran_Frag" />
+</navigation>
