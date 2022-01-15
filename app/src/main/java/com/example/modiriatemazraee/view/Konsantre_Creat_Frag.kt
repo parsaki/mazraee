@@ -18,7 +18,7 @@ import com.example.modiriatemazraee.view.adapters.Recycle.Data.KonsnteAdapter
 import com.example.modiriatemazraee.viewmodel.MainViewModel
 import java.util.*
 
-class Home2_Frag: Fragment() {
+class Konsantre_Creat_Frag: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

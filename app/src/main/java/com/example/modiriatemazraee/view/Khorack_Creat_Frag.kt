@@ -13,25 +13,29 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.modiriatemazraee.R
+import com.example.modiriatemazraee.databinding.Home2Binding
 import com.example.modiriatemazraee.databinding.Home6Binding
 import com.example.modiriatemazraee.model.Khoracks
+import com.example.modiriatemazraee.model.Konsantres
 import com.example.modiriatemazraee.model.State
 import com.example.modiriatemazraee.view.adapters.Recycle.Data.KhorakAdapter
+import com.example.modiriatemazraee.view.adapters.Recycle.Data.KonsnteAdapter
 import com.example.modiriatemazraee.viewmodel.MainViewModel
 import java.util.*
 
-class Home8_Frag: Fragment() {
+class Khorack_Creat_Frag: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
     val model: MainViewModel by activityViewModels()
-    lateinit var bind: Home6Binding
+    lateinit var bind:Home6Binding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         bind = Home6Binding.inflate(layoutInflater)
+        model.khorak1_clean()
 
         bind.home6Tooltext.text = getText(R.string.khorak_sabt)
 
@@ -39,15 +43,12 @@ class Home8_Frag: Fragment() {
             requireActivity().onBackPressed()
         }
 
-        bind.home6Include.home6HagmText.setText(model.khorak1.value!!.konst_wieght.toString())
-        bind.home6Include.home6NamekhorakText.setText(model.khorak1.value!!.name)
-        bind.home6Include.home6NamekhorakText.isEnabled = false
-        bind.home6Include.home6Edittext1.setText(model.khorak1.value!!.totalweghit.toString())
-        bind.home6Include.home6Edittext2.setText(model.khorak1.value!!.onkoli.toString())
-
-        bind.home6Include.home6Recycleview.adapter =  KhorakAdapter(model.khorak1.value!!.khorack)
+        bind.home6Include.home6Recycleview.adapter =  KhorakAdapter(model.khorak1.value!!.khorack,model,bind)
         bind.home6Include.home6Recycleview.layoutManager = LinearLayoutManager(requireContext())
 
+        model.khorak1.observe(this,{
+            bind.home6Include.home6Edittext1.setText(it.totalweghit.toString())
+        })
 
         val araye = arrayListOf<String>("کنسانتره انتخاب کنید")
         model.Get_Konsantre().forEach {
@@ -55,7 +56,6 @@ class Home8_Frag: Fragment() {
         }
         val adapt = ArrayAdapter<String>(requireContext(),R.layout.spin2,araye )
         bind.home6Include.hom6Spiner.adapter =adapt
-        bind.home6Include.hom6Spiner.setSelection(get_spiner())
         bind.home6Include.hom6Spiner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -87,14 +87,14 @@ class Home8_Frag: Fragment() {
         }
 
         bind.home6Include.home6BtnApplysave.setOnClickListener {
-            var state: State? =null
+            var state:State? =null
             val date = Date()
             val dateformat = android.text.format.DateFormat.format("yyyy/MM/dd hh:mm",date).toString()
             //model.onkilo_set(model.konsant1.value!!.iteams)
             model.khorak1.value!!.Date =dateformat
             model.khorak1.value!!.name = bind.home6Include.home6NamekhorakText.text.toString()
             if(!bind.home6Include.home6HagmText.text.isNullOrEmpty())model.khorak1.value!!.konst_wieght = bind.home6Include.home6HagmText.text.toString().toFloat()
-            state =  model.Update_Khorak(model.khorak1.value!!)
+            state =  model.Set_Khorak(model.khorak1.value!!)
             if(state == State.sucsses){
                 requireActivity().onBackPressed()
                 model.khorak1_clean()
@@ -110,14 +110,5 @@ class Home8_Frag: Fragment() {
         }
 
         return bind.root
-    }
-
-    private fun get_spiner():Int{
-        var posit = 0
-        model.Get_Konsantre().forEach {
-            if(it.namekonsntre == model.khorak1.value!!.khonsnre.namekonsntre) {return posit}
-            posit ++
-        }
-        return 0
     }
 }

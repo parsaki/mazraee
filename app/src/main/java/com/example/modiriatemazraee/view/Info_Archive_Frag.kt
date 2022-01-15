@@ -13,7 +13,7 @@ import com.example.modiriatemazraee.model.*
 import com.example.modiriatemazraee.view.adapters.Recycle.archive.DInfoAdapter
 import com.example.modiriatemazraee.viewmodel.MainViewModel
 
-class Home11_Frag: Fragment() {
+class Info_Archive_Frag: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

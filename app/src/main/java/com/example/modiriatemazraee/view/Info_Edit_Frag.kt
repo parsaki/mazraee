@@ -11,18 +11,14 @@ import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.modiriatemazraee.R
 import com.example.modiriatemazraee.databinding.Home10Binding
-import com.example.modiriatemazraee.databinding.Home6Binding
 import com.example.modiriatemazraee.model.State
 import com.example.modiriatemazraee.model.cowType
-import com.example.modiriatemazraee.model.iteamKonsntre
-import com.example.modiriatemazraee.view.adapters.Recycle.archive.DKonsantAdapter
 import com.example.modiriatemazraee.viewmodel.MainViewModel
 import java.util.*
 
-class Home10_Frag: Fragment() {
+class Info_Edit_Frag: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -36,11 +32,18 @@ class Home10_Frag: Fragment() {
         bind = Home10Binding.inflate(layoutInflater)
         bind.home10Tooltext.text = getText(R.string.info_sabt)
 
-        model.info_clear()
-
         bind.home10Back.setOnClickListener {
             requireActivity().onBackPressed()
         }
+
+        bind.home10Include.home10CowsText.setText(model.info1.value!!.cow_number.toString())
+        bind.home10Include.home10NamesalonText.setText(model.info1.value!!.room_name)
+        bind.home10Include.home10NamesalonText.isEnabled = false
+        bind.home10Include.home10RoomnumText.setText(model.info1.value!!.roomnumber.toString())
+        bind.home10Include.home10CowtypeText.setText(model.info1.value!!.cow_group.toString())
+
+        if(model.info1.value!!.cow_type == cowType.unshiri)bind.home10Include.home10Radiobtn1.isChecked = true
+        else  bind.home10Include.home10Radiobtn2.isChecked = true
 
         val araye = arrayListOf<String>("کنسانتره انتخاب کنید")
         model.Get_Khorak().forEach {
@@ -48,7 +51,7 @@ class Home10_Frag: Fragment() {
         }
         val adapt = ArrayAdapter<String>(requireContext(),R.layout.spin2,araye )
         bind.home10Include.home10Spiner.adapter =adapt
-        bind.home10Include.home10Spiner.setSelection(0)
+        bind.home10Include.home10Spiner.setSelection(get_spiner())
         bind.home10Include.home10Spiner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -69,15 +72,13 @@ class Home10_Frag: Fragment() {
 
         bind.home10Include.home10Radiobtn1.setOnClickListener {
             model.slect1.value = true
-            bind.home10Include.home10Radiobtn2.isSelected = false
+            bind.home10Include.home10Radiobtn2.isChecked =true
             model.info1.value!!.cow_type = cowType.unshiri
-            print("cow:${model.info1.value!!.cow_type}")
         }
         bind.home10Include.home10Radiobtn2.setOnClickListener {
             model.slect1.value = false
-            bind.home10Include.home10Radiobtn2.isSelected = true
+            bind.home10Include.home10Radiobtn2.isChecked = true
             model.info1.value!!.cow_type = cowType.shiri
-            print("cow:${model.info1.value!!.cow_type}")
         }
 
         bind.home10Include.home10BtnNewsave.setOnClickListener {
@@ -102,7 +103,7 @@ class Home10_Frag: Fragment() {
             if(!bind.home10Include.home10CowsText.text.toString().isNullOrEmpty())model.info1.value!!.cow_number = bind.home10Include.home10CowsText.text.toString().toInt()
             model.info1.value!!.cow_group = bind.home10Include.home10CowtypeText.text.toString()
             if(!bind.home10Include.home10RoomnumText.text.toString().isNullOrEmpty())model.info1.value!!.roomnumber = bind.home10Include.home10RoomnumText.text.toString().toInt()
-            state =  model.Set_Info(model.info1.value!!)
+            state =  model.Update_Info(model.info1.value!!)
             if(state == State.sucsses){
                 requireActivity().onBackPressed()
                 model.info_clear()
@@ -119,5 +120,13 @@ class Home10_Frag: Fragment() {
         }
 
         return bind.root
+    }
+    private fun get_spiner():Int{
+        var posit = 0
+        model.Get_Info().forEach {
+            if(it.room_name == model.info1.value!!.khorak.name) {return posit}
+            posit ++
+        }
+        return 0
     }
 }

@@ -15,7 +15,7 @@ import com.example.modiriatemazraee.view.adapters.Recycle.ORCadapter
 import com.example.modiriatemazraee.view.adapters.Recycle.archive.DKonsantAdapter
 import com.example.modiriatemazraee.viewmodel.MainViewModel
 
-class Home3_Frag: Fragment() {
+class Konsantre_Archive_Frag: Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
